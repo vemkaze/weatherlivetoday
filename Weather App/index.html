@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="Resources/favicon.png">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="app-container" id="app-container">
+
+        <div class="header">
+            <h1>Weather App</h1>
+        </div>
+
+        <!-- Block 1 -->
+        <div class="search-box" id="search-box">
+            <input type="text" class="search" id="search" placeholder="Search for a city">
+            <img src="Resources/search-icon.svg" alt= ="search-btn" id="search-btn">
+        </div>
+
+        <!-- Block 2 -->
+        <div class="temp-box">
+            <img src="" alt="" id="weather_img">
+            <span id="temp-value">22&deg;C</span>
+            <span id="city-name">Delhi</span>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="humidity-and-wind-speed">
+            <div class="humidity">
+                <img src="Resources/humidity-icon.png" alt="">
+                <div>
+                    <span id="humidity-value">99%</span>
+                    <span>Humidity</span>
+                </div>
+            </div>
+
+            <div class="wind-speed">
+                <img src="Resources/wind-icon.webp" alt="">
+                <div>
+                    <span id="wind-speed-value">0.78 Km/hr</span>
+                    <span>Wind Speed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Client Scripting -->
+        <script src="index.js"></script>
+    </div>
+</body>
+</html>

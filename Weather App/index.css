@@ -1,0 +1,229 @@
+body{
+    /* Dimension Full Window */
+    height: 100vh;
+    width:100vw;
+
+    /* Sliding & Scrolling None */
+    overflow: hidden;
+
+    /* Side Spacing */
+    margin: 0px;
+    padding: 0px;
+
+    /* Background Image */
+    background-image: url(Resources/bg-moon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* display Property; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Font */
+    font-family: poppins,sans-serif;
+    letter-spacing: 0.5px;
+    word-spacing: 5px;
+}
+
+/* No Wrapping of any Element */
+body *{
+    flex-wrap: nowrap;
+}
+
+/* ------Main Container------ */
+.app-container{
+    /* Dimensions  */
+    height: fit-content;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px 20px;
+    background-image: linear-gradient(to right, #fff5e7 0%, #ffd7ca 100%);
+}
+.app-container>*{
+    width: 100%;
+}
+
+.header{
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom:20px ;
+}
+.header>h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin:10px 0px 15px;
+    color:#000000;
+    word-spacing: 12px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+}
+/* ------Block 1------ */
+.search-box{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-box>input{
+    width: 80%;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 6px 12px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000b9;
+    box-shadow: 0px 0px 3px 0px #000000;
+}
+.search-box>img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+    margin-left:20px;
+    box-shadow: 0px 0px 3px 0px #000000;
+}
+.search-box>img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 0px black;
+    background-color: #feffcb;
+}
+.search-box>img:active{
+    transform: scale(1);
+    box-shadow: 0px 0px 3px 0px #000000;
+    background-color: white;
+}
+
+/* ------Block 2------ */
+.temp-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 40px;
+}
+.temp-box>img{
+    height: 210px;
+    width: 210px;
+}
+#temp-value{
+    font-size: 60px;
+    font-weight: 600;
+}
+#city-name{
+    font-size: 30px;
+    font-weight: 600;
+}
+/* ------Block 3------ */
+.humidity-and-wind-speed{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.humidity,.wind-speed{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:10px 10px;
+}
+.humidity>img , .wind-speed>img{
+    height: 50px;
+    width: 50px;
+}
+.wind-speed>img{
+    width: 50px;
+}
+.humidity>div , .wind-speed>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#humidity-value,#wind-speed-value{
+    font-size: 25px;
+    font-weight: 600;
+}
+.humidity>div:nth-child(2) , .wind-speed>div:nth-child(2){
+    font-size: 16px;
+    padding: 0px 5px;
+}
+
+
+/* ----- Responsiveness ----- */
+@media screen and (max-width:500px) {
+
+    /* ----- Whole Body ----- */
+    body{
+        height:100vh;
+        width: 100vw;
+        font-size: 16px;
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items:center;
+    }
+
+    /* ----- Main Container ----- */
+    .app-container{
+        width:80vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top:0px ;
+        padding-bottom:0px;
+    }
+
+    /* -----Heading Name------ */
+    .header>h1{
+        font-size: 2.5rem;
+        margin:20px 0px;
+    }
+
+    /* ----- Block-1 ----- */
+    .search-box>input{
+        width: 80%;
+        font-size: 1.2rem;
+    }
+
+    /* ----- Block-2 ----- */
+    .temp-box{
+        height: 200px;
+        width: 200px;
+    }
+    #temp-value{
+        font-size: 3rem;
+    }
+    #city-name{
+        font-size: 1.5rem;
+    }
+
+    /* ----- Block-3 ----- */
+    .humidity-and-wind-speed{
+        margin:18px 0px 30px;
+    }
+    .humidity>div:nth-child(2),.wind-speed>div:nth-child(2){
+        font-size: 1rem;
+        padding: 0px;
+    }
+    #humidity-value,#wind-speed-value{
+        font-size: 1.4rem;
+        width: fit-content;
+        word-spacing: 2px;
+        letter-spacing: 0px;
+    }
+    .humidity,.wind-speed{
+        padding: 5px 0px;
+    }
+}
